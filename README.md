@@ -1,4 +1,4 @@
-# Firefox Twitter Ad Blocker
+# Twitter Ad Blocker for Firefox
 Remove ads from twitter
 
 I'm not sticking this on the Firefox Extensions page as the Twitter HTML layout is bound to 
