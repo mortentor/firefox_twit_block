@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "No Twitter Ads",
+  "version": "1.0",
+
+  "description": "Adds a red border to all webpages matching mozilla.org.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["jquery-3.6.0.min.js", "kill_ads.js"]
+    }
+  ]
+
+}
