@@ -1,7 +1,21 @@
 setInterval ( ()=>{
-	$('span:contains("Promoted")').parent().parent().parent().parent().parent().parent().css('display', 'none');
+
+	let ads = $('span:contains("Ad")').filter( (o, e)=>{
+		return $(e).parent().attr( "dir") == "ltr";
+	});
+	
+	console.log ( ads.length  );
+	
+	for ( const ad of ads ) {
+		
+		$(ad).parent().parent().parent().parent().parent().parent().parent().remove(); // css('display', 'none');
+	}
+
+	//let divs = document.querySelectorAll ( "div[dir='ltr']" );
+	//console.log ( divs );
 }, 1000 );
 
+/*
 let init_ok = false;
 addEventListener ( "load", ()=>{
 
@@ -31,7 +45,7 @@ addEventListener ( "load", ()=>{
 							if ( alt && alt.startsWith ("--") ) {
 								
 								alt = alt.substr( 2 );
-								
+
 								console.log("added ", item.tagName);
 								console.log( item );
 								console.log ( "alt:", alt );
@@ -67,3 +81,4 @@ addEventListener ( "load", ()=>{
 	}
 
 })
+*/
